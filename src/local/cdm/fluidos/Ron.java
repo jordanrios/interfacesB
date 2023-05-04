@@ -4,14 +4,15 @@ import local.cdm.energias.*;
 
 /**
  *
- * @author Silvia Martinez Riobo
+ * @author alumno
  */
-public class Vodka extends Liquido implements Graduable, Bebible{
+public class Ron extends Liquido implements Graduable, Bebible {
+
     public static Double GRADOS_DEF = 1.0;
     private Double grados;
 
-    public Vodka(Double grados, Double litros) {
-        super(litros, "incoloro");
+    public Ron(Double grados, Double litros) {
+        super(litros, "ambar");
         this.grados = grados;
     }
 
@@ -21,7 +22,7 @@ public class Vodka extends Liquido implements Graduable, Bebible{
     }
 
     public void setGrados(Double grados) {
-         if (grados >= 0 && grados <= 1) {
+        if (grados >= 0 && grados <= 1) {
             this.grados = grados;
         } else {
             this.grados = GRADOS_DEF;
@@ -29,7 +30,7 @@ public class Vodka extends Liquido implements Graduable, Bebible{
     }
 
     @Override
-    public Liquido mezclar(Liquido l) throws NoSePuedeMezclarException {
+    public Liquido mezclar(Liquido l) throws NoSePuedeMezclarException{
         Copa c;
         if (l.getClass().getSimpleName().equals("Cola") || l.getClass().getSimpleName().equals("Agua")) {
             Graduable g = (Graduable) this;
@@ -49,4 +50,5 @@ public class Vodka extends Liquido implements Graduable, Bebible{
     public Integer getEnergia() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
 }

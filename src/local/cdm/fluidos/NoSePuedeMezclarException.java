@@ -2,7 +2,7 @@ package local.cdm.fluidos;
 
 /**
  *
- * @author Silvia Martinez Riobo
+ * @author alumno
  */
 public class NoSePuedeMezclarException extends Exception{
     

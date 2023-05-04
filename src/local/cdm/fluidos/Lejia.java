@@ -1,18 +1,16 @@
 package local.cdm.fluidos;
 
-import local.cdm.energias.*;
-
 /**
  *
- * @author Silvia Martinez Riobo
+ * @author alumno
  */
-public class Agua extends Liquido implements Bebible{
-    public static Double PUREZA_DEF=1.0;
+public class Lejia extends Liquido{
+    public static Double PUREZA_DEF = 1.0;
     private Double pureza;
 
-    public Agua(Double litros) {
+    public Lejia(Double litros) {
         super(litros, "incoloro");
-        this.pureza = PUREZA_DEF;
+        this.pureza=PUREZA_DEF;
     }
 
     public Double getPureza() {
@@ -26,12 +24,13 @@ public class Agua extends Liquido implements Bebible{
             this.pureza=PUREZA_DEF;
         }
     }
-
+    
+    
     @Override
     public Liquido mezclar(Liquido l) {
-        Agua a = new Agua(l.getLitros()+this.litros);
+        Lejia a = new Lejia(l.getLitros()+this.litros);
         a.setColor(l.getColor() + "-" + this.color);
-        if (l.getClass().getSimpleName().equals("Lejia")){
+        if (l.getClass().getSimpleName().equals("Agua")){
             a.setPureza(1.0);
         }else{
             Double r = a.getLitros()/l.getLitros();
@@ -43,11 +42,6 @@ public class Agua extends Liquido implements Bebible{
     @Override
     public String toString() {
         return super.toString() + "\nPureza: " + pureza;
-    }
-
-    @Override
-    public Integer getEnergia() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

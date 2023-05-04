@@ -4,7 +4,7 @@ import local.cdm.energias.*;
 
 /**
  *
- * @author Silvia Martinez Riobo
+ * @author alumno
  */
 public class Copa extends Liquido implements Graduable, Bebible {
 

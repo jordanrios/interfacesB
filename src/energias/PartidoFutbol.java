@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package desarrolloB;
+package local.cdm.energias;
 
 /**
  *
@@ -32,7 +32,13 @@ public class PartidoFutbol implements Accion{
     
     @Override
     public void hacer(){
-        
+        if(this.prorroga && this.penaltis){
+        System.out.println("Jugando partido de categoria" + this.categoria + "con prorroga y penaltis");
+        }else if(this.prorroga){
+        System.out.println("Jugando partido de categoria" + this.categoria + "con prorroga");
+        }else{
+        System.out.println("Jugando partido de categoria" + this.categoria);
+    }
     }
 
     @Override
@@ -69,8 +75,8 @@ public class PartidoFutbol implements Accion{
             this.penaltis = penaltis;
         }
     }
-    
-       
+
+         
     
     
 }

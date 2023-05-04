@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package desarrolloB;
+package local.cdm.energias;
 
 /**
  *
@@ -25,7 +25,9 @@ public class ExamenTest extends Examen{
     
     @Override
     public void hacer(){
-        
+        for(int i=0; i<this.numPreguntas; i++){
+            System.out.println("Haciendo pregunta" + i + "del examen de la asignatura" + this.asignatura);
+        }
     }
 
     @Override
